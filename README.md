@@ -69,9 +69,45 @@ sudo update-alternatives --config gcc
 ## Installing Python 3.7 on Ubuntu 18
 
 **Step 1**  
+Start by updating the packages list and installing the prerequisites  
+```bash
+sudo apt update
+sudo apt install software-properties-common
+```
 
+**Step 2**  
+Add deadsnakes PPA to your sources list:  
+```bash
+sudo add-apt-repository ppa:deadsnakes/ppa
+```
+
+**Step 3**  
+Install Python 3.7  
+```bash
+sudo apt install python3.7
+
+# To verify if it is installed
+ls /usr/bin/pyhton*
+# /usr/bin/python            /usr/bin/python2-config  /usr/bin/python3.6-config   /usr/bin/python3.7m       /usr/bin/python-config
+# /usr/bin/python2           /usr/bin/python2-qr      /usr/bin/python3.6m         /usr/bin/python3-config
+# /usr/bin/python2.7         /usr/bin/python3         /usr/bin/python3.6m-config  /usr/bin/python3m
+# /usr/bin/python2.7-config  /usr/bin/python3.6       /usr/bin/python3.7          /usr/bin/python3m-config
+```
+
+**Step 4**  
+Setup python3.7 as the default python3 bin  
+```bash
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 80
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 10
+```
+
+Now that should do the trick, but if you do not want to mess with the system, you can always call python3.7 by  
+```bash
+python3.7 -m http.server 8080
+```
 
 ## References
 
 - Basic of update-alternatives [link](https://www.youtube.com/watch?v=cC9GeDNDjjM)
 - GUI of update-alternative [link](https://www.youtube.com/watch?v=cC9GeDNDjjM)
+- Python3.7 Installation on Ubuntu 18 [link](https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/)
