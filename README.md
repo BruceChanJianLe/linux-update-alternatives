@@ -97,6 +97,7 @@ ls /usr/bin/pyhton*
 **Step 4**  
 Setup python3.7 as the default python3 bin  
 ```bash
+# WARNING, better do not do this and instead use method below, as some dependecies still depend on python3.6
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 80
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 10
 ```
