@@ -66,6 +66,8 @@ Look at your gcc and g++
 sudo update-alternatives --config gcc
 ```
 
+Ref: https://askubuntu.com/questions/26498/how-to-choose-the-default-gcc-and-g-version
+
 ## Installing Python 3.7 on Ubuntu 18
 
 **Step 1**  
