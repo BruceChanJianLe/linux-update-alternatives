@@ -2,7 +2,7 @@
 
 Ever wonder how to reset the default editor to vim? Install another version of gcc? Install the latest python 3.7 version? Here's the answer without going to use virtual environment as you can manage your own environment!
 
-## Resetting Your Default Editor
+## Updating Your Default Editor
 
 **Step 1**  
 Install vim  
@@ -29,6 +29,12 @@ sudo update-alternatives --config editor
 # Press <enter> to keep the current choice[*], or type selection number: 
 
 # Choose 4!
+```
+
+If you have nvim compiled from source, you may run the following to use it!
+
+```bash
+sudo update-alternatives --install /usr/bin/editor editor /usr/local/bin/nvim 60
 ```
 
 ## Installing a newer version of gcc on Ubuntu 16
